@@ -12,7 +12,7 @@ runs:
   using: "composite"
   steps:
     - name: Echo input var
-      run: echo "${{ input.url }}"
+      run: echo "${{ inputs.url }}"
       shell: bash
 
 
