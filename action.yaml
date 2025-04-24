@@ -1,12 +1,18 @@
-name: 'Test env'
-description: 'Test env'
+name: 'Test var'
+description: 'Test var'
+
+inputs:
+  url:
+    description: 'url'
+    required: false
+    default: 'http://hello-world.com'
+
+
 runs:
   using: "composite"
   steps:
-    - name: Echo env
-      run: env
+    - name: Echo input var
+      run: echo "${{ input.url }}"
       shell: bash
 
-    - name: Echo vars
-      run: echo ${{ vars }}
 
